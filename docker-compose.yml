@@ -1,0 +1,21 @@
+version: '2'
+
+services:
+  simplecrud:
+    build: ./
+    ports:
+      - 8080:80
+    environment:
+      APACHE_DOCUMENT_ROOT: '/var/www/public'
+    volumes:
+      - .:/var/www/
+    depends_on:
+      - dbmysql
+
+  dbmysql:
+    image: mysql:5.7
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: simplecrudpass
+      MYSQL_DATABASE: simplecrud
+

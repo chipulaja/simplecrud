@@ -1,0 +1,20 @@
+{
+    "name": "simple crud",
+    "description": "applikasi crud sederhana",
+    "keywords": ["crud"],
+    "license": "MIT",
+    "authors": [
+        {"name": "chipulaja", "email": "chipul.aja@gmail.com"}
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "slim/slim": "^3.4",
+        "league/plates": "^3.1",
+        "doctrine/orm": "^2.6.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "SimpleCrud\\": "src/SimpleCrud/"
+        }
+    }
+}
